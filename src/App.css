@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: black;
+  min-height: 100vh;
+  color: #00b800;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+}
+
+main > :nth-child(n):not(:last-child) {
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+textarea {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  background-color: #00b800;
+  width: 500px;
+  max-width: 100%;
+  height: 300px;
+  padding: 10px;
+  box-shadow: 0 0 9px 0 #00b800;
+}
+
+textarea:disabled {
+  box-shadow: 0 0 9px 0 #a5a2a2;
+}
+
+textarea:disabled,
+button:disabled,
+input:disabled {
+  cursor: not-allowed;
+  background-color: #a5a2a2;
+}
+
+.set-timer {
+  display: flex;
+  align-items: center;
+}
+
+.set-timer span {
+  line-height: 1.3;
+}
+
+input {
+  margin: 10px;
+  padding-left: 10px;
+  width: 100px;
+  height: 35px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-family: "Press Start 2P", cursive;
+  background-color: #00b800;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+button {
+  font-size: 19px;
+  padding: 10px 15px;
+  font-family: "Press Start 2P", cursive;
+  background-color: #00b800;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* For Small Screens */
+@media (max-width: 767px) {
+  .set-timer {
+    flex-direction: column;
+  }
+}
