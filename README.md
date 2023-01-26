@@ -12,6 +12,7 @@ The features that I have added to the original logic :
 
 1. Using typescript, as at first the project was created in javascript.
 2. Adding the choice for the user to determine the time he wants to challenge himself with a default value of 5 seconds.
+3. Created a custom hock that holds all the logic ( states, functions and hocks ) outside the components or the app.
 
 The project design is responsive, so enjoy interacting with it on whatever device you use.
 
