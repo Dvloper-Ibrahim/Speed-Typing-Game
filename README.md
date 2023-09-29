@@ -2,7 +2,7 @@
 
 This project is mainly created using React.js & TypeScript.
 
-## How to interact with the game 🤨
+## How to interact with the game
 
 Set the timer, click the start button and start typing directly.
 
