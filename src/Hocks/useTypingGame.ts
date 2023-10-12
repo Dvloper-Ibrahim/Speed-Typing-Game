@@ -19,16 +19,6 @@ function useTypingGame(): typingGame {
   const [wordCount, setWordCount] = useState(0);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
-  useEffect(() => {
-    if (count > 0 && isStarted)
-      setTimeout(() => {
-        setCount(count - 1);
-      }, 1000);
-    else if (count === 0) {
-      endGame();
-    }
-  }, [count, isStarted]);
-
   function handleTextArea(e: React.ChangeEvent<HTMLTextAreaElement>): void {
     setTextArea(e.target.value);
   }
@@ -56,6 +46,17 @@ function useTypingGame(): typingGame {
       inputRef.current.focus();
     }
   }
+
+  useEffect(() => {
+    if (isStarted && count > 0)
+      setTimeout(() => {
+        setCount(count - 1);
+      }, 1000);
+    else if (count === 0) {
+      endGame();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [count, isStarted]);
 
   return {
     textArea,

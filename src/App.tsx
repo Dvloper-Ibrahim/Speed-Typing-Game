@@ -25,7 +25,7 @@ function App(): JSX.Element {
       />
 
       <div className="set-timer">
-        <span>Set the timer and challenge yourself</span>
+        <span>Set the timer and challenge yourself in</span>
         <input
           type="number"
           ref={timerRef}
